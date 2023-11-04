@@ -1,19 +1,17 @@
-export class UserClass {
+export type UserClassConstructorProps = {
+  firstName: string;
+  lastName: string;
+  email: string;
+};
+
+export default class UserClass {
   // Properties
   private _firstName: string;
   private _lastName: string;
   private _email: string;
 
   // Constructor
-  constructor({
-    firstName,
-    lastName,
-    email,
-  }: {
-    firstName: string;
-    lastName: string;
-    email: string;
-  }) {
+  constructor({ firstName, lastName, email }: UserClassConstructorProps) {
     this._firstName = firstName;
     this._lastName = lastName;
     this._email = email;
