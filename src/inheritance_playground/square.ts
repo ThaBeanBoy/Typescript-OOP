@@ -44,3 +44,19 @@ export default class Square extends Shape {
     throw new Error('Method not implemented.');
   }
 }
+
+export class InvalidHeightError extends Error {
+  static Message = 'Height cannot be a negative number';
+
+  constructor() {
+    super(InvalidHeightError.Message);
+  }
+}
+
+export class InvalidWidthError extends Error {
+  static Message = 'Width cannot be a negative number';
+
+  constructor() {
+    super(InvalidWidthError.Message);
+  }
+}

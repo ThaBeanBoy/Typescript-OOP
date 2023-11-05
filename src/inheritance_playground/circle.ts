@@ -34,3 +34,11 @@ export default class Circle extends Shape {
     throw new Error('Method not implemented.');
   }
 }
+
+export class InvalidRadiusError extends Error {
+  static Message = 'Height cannot be a negative number';
+
+  constructor() {
+    super(InvalidRadiusError.Message);
+  }
+}
