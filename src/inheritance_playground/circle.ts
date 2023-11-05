@@ -7,6 +7,8 @@ export default class Circle extends Shape {
   private _radius: number;
 
   constructor({ radius, ...ShapeConstructor }: CircleConstructorProps) {
+    if (radius < 0) throw new InvalidRadiusError();
+
     super(ShapeConstructor);
 
     this._radius = radius;
@@ -14,24 +16,33 @@ export default class Circle extends Shape {
 
   // Getters & setters
   get radius() {
-    throw new Error('Method not implemented.');
+    return this._radius;
   }
-  set radius(value: any) {
-    throw new Error('Method not implemented.');
+  set radius(value: number) {
+    if (value < 0) throw new InvalidRadiusError();
+
+    this._radius = value;
   }
 
   get diameter() {
-    throw new Error('Method not implemented.');
+    return this._radius * 2;
   }
-  set diameter(value: any) {
-    throw new Error('Method not implemented.');
+  set diameter(value: number) {
+    if (value < 0) throw new InvalidRadiusError();
+
+    this.radius = value / 2;
   }
 
   get area(): number {
-    throw new Error('Method not implemented.');
+    return Math.PI * this._radius ** 2;
   }
+
   get parameter(): number {
-    throw new Error('Method not implemented.');
+    return 2 * Math.PI * this._radius;
+  }
+
+  override get details() {
+    return `${super.details}\nradius: ${this._radius}`;
   }
 }
 

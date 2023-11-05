@@ -73,9 +73,7 @@ describe('Getters', () => {
 
 describe('Calculations', () => {
   test('Area', () => {
-    expect(validTestCircle.area).toBe(
-      2 * Math.PI * testCircleProps.radius ** 2
-    );
+    expect(validTestCircle.area).toBe(Math.PI * testCircleProps.radius ** 2);
   });
 
   test('Parameter/Circumference', () => {
