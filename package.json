@@ -7,12 +7,21 @@
     "dev": "vite",
     "test": "vitest --ui",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint"
   },
   "devDependencies": {
     "@vitest/ui": "^0.34.6",
+    "gts": "^5.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "@types/node": "20.8.2"
   }
 }
