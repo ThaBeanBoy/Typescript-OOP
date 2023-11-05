@@ -1,17 +1,21 @@
 import Shape, { ShapeConstructorProps } from './shape';
 
-export type SquareConstructorProps = {
+export type RectangleConstructorProps = {
   height: number;
   width: number;
 } & ShapeConstructorProps;
 
-export default class Square extends Shape {
+export default class Rectangle extends Shape {
   // properties
   private _height: number;
   private _width: number;
 
   // constructor
-  constructor({ height, width, ...shapConstructore }: SquareConstructorProps) {
+  constructor({
+    height,
+    width,
+    ...shapConstructore
+  }: RectangleConstructorProps) {
     super(shapConstructore);
 
     this._height = height;
