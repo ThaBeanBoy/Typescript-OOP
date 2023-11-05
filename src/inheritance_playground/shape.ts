@@ -10,27 +10,18 @@ export type ShapeConstructorProps = {
 
 export default abstract class Shape {
   // Properties
-  private _position: positionType;
+  position: positionType;
   public readonly generatedOn: Date;
 
   // Constructor
   constructor({ position, generatedOn }: ShapeConstructorProps) {
-    this._position = position;
+    this.position = position;
     this.generatedOn = generatedOn;
-  }
-
-  // Getters & setters
-  get position() {
-    throw new Error('Method not implemented.');
-  }
-
-  set position(value: positionType) {
-    throw new Error('Method not implemented.');
   }
 
   // Utility functions
   get details() {
-    return `position: (${this._position.x}, ${this._position.y})`;
+    return `position: (${this.position.x}, ${this.position.y})`;
   }
 
   abstract get area(): number;

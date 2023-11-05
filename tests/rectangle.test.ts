@@ -5,16 +5,16 @@ import Rectangle, {
   InvalidWidthError,
 } from '../src/inheritance_playground/rectangle';
 
-const testSquareProps: RectangleConstructorProps = {
+const testRectangleProps: RectangleConstructorProps = {
   position: { x: 0, y: 0 },
   generatedOn: new Date(),
   height: 30,
   width: 40,
 };
 
-const validTestSquare = new Rectangle(testSquareProps);
+const validTestRectangle = new Rectangle(testRectangleProps);
 
-describe('Square Constructor', () => {
+describe('Rectangle Constructor', () => {
   // Checking negative height
   test('Negative Height', () => {
     try {
@@ -37,8 +37,8 @@ describe('Square Constructor', () => {
       new Rectangle({
         position: { x: 0, y: 0 },
         generatedOn: new Date(),
-        height: -30,
-        width: 40,
+        height: 30,
+        width: -40,
       });
       expect.fail();
     } catch (error) {
@@ -48,43 +48,43 @@ describe('Square Constructor', () => {
   });
 
   // Checking proper details
-  test('Correct Square Constructor Props', () => {
-    new Rectangle(testSquareProps);
+  test('Correct Rectangle Constructor Props', () => {
+    new Rectangle(testRectangleProps);
   });
 });
 
 describe('Getters', () => {
   test('Position', () => {
-    expect(validTestSquare.position.x, 'Correct x position').toBe(
-      testSquareProps.position.x
+    expect(validTestRectangle.position.x, 'Correct x position').toBe(
+      testRectangleProps.position.x
     );
 
-    expect(validTestSquare.position.y, 'Correct y position').toBe(
-      testSquareProps.position.y
+    expect(validTestRectangle.position.y, 'Correct y position').toBe(
+      testRectangleProps.position.y
     );
   });
 
   // Generation date
   test('Generation Date', () => {
-    expect(validTestSquare.generatedOn.getTime()).toBe(
-      testSquareProps.generatedOn.getTime()
+    expect(validTestRectangle.generatedOn.getTime()).toBe(
+      testRectangleProps.generatedOn.getTime()
     );
   });
 
   // height
   test('Height', () => {
-    expect(validTestSquare.height).toBe(testSquareProps.height);
+    expect(validTestRectangle.height).toBe(testRectangleProps.height);
   });
 
   // width
   test('Width', () => {
-    expect(validTestSquare.width).toBe(testSquareProps.width);
+    expect(validTestRectangle.width).toBe(testRectangleProps.width);
   });
 
   // details
   test('Details', () => {
-    expect(validTestSquare.details).toBe(
-      `position: (${testSquareProps.position.x}, ${testSquareProps.position.y})\nwidth: ${testSquareProps.width}\nheight: ${testSquareProps.height}`
+    expect(validTestRectangle.details).toBe(
+      `position: (${testRectangleProps.position.x}, ${testRectangleProps.position.y})\nwidth: ${testRectangleProps.width}\nheight: ${testRectangleProps.height}`
     );
   });
 });
@@ -92,19 +92,19 @@ describe('Getters', () => {
 describe('Calculations', () => {
   // area
   test('Area', () => {
-    expect(validTestSquare.area).toBe(1200);
+    expect(validTestRectangle.area).toBe(1200);
   });
 
   // parameter
   test('Parameter', () => {
-    expect(validTestSquare.parameter).toBe(
-      2 * testSquareProps.width + 2 * testSquareProps.height
+    expect(validTestRectangle.parameter).toBe(
+      2 * testRectangleProps.width + 2 * testRectangleProps.height
     );
   });
 });
 
 describe('Setters', () => {
-  const testSquareChangesProps: RectangleConstructorProps = {
+  const testRectangleChangesProps: RectangleConstructorProps = {
     position: { x: 50, y: 50 },
     generatedOn: new Date(),
     height: 80,
@@ -112,34 +112,38 @@ describe('Setters', () => {
   };
 
   test('Position Reassignment', () => {
-    validTestSquare.position = testSquareChangesProps.position;
-    expect(validTestSquare.position.x).toBe(testSquareChangesProps.position.x);
-    expect(validTestSquare.position.y).toBe(testSquareChangesProps.position.y);
+    validTestRectangle.position = testRectangleChangesProps.position;
+    expect(validTestRectangle.position.x).toBe(
+      testRectangleChangesProps.position.x
+    );
+    expect(validTestRectangle.position.y).toBe(
+      testRectangleChangesProps.position.y
+    );
   });
 
   test('X Position Reassignment', () => {
-    validTestSquare.position.x = 999;
-    expect(validTestSquare.position.x).toBe(999);
+    validTestRectangle.position.x = 999;
+    expect(validTestRectangle.position.x).toBe(999);
   });
 
   test('Y Position Reassigment', () => {
-    validTestSquare.position.y = 999;
-    expect(validTestSquare.position.y).toBe(999);
+    validTestRectangle.position.y = 999;
+    expect(validTestRectangle.position.y).toBe(999);
   });
 
   test('Height Reassignment Error', () => {
     try {
-      validTestSquare.height = -30;
+      validTestRectangle.height = -30;
       expect.fail(InvalidHeightError.Message);
     } catch (error) {
-      expect(error).to.be.an.instanceOf(InvalidWidthError);
-      expect(error.message).to.equal(InvalidWidthError.Message);
+      expect(error).to.be.an.instanceOf(InvalidHeightError);
+      expect(error.message).to.equal(InvalidHeightError.Message);
     }
   });
 
   test('Width Reassignment Error', () => {
     try {
-      validTestSquare.width = -30;
+      validTestRectangle.width = -30;
       expect.fail(InvalidWidthError.Message);
     } catch (error) {
       expect(error).to.be.an.instanceOf(InvalidWidthError);
@@ -148,12 +152,12 @@ describe('Setters', () => {
   });
 
   test('Height Reassignment', () => {
-    validTestSquare.height = testSquareChangesProps.height;
-    expect(validTestSquare.height).toBe(testSquareChangesProps.height);
+    validTestRectangle.height = testRectangleChangesProps.height;
+    expect(validTestRectangle.height).toBe(testRectangleChangesProps.height);
   });
 
   test('Width Reassignment Error', () => {
-    validTestSquare.width = testSquareChangesProps.width;
-    expect(validTestSquare.width).toBe(testSquareChangesProps.width);
+    validTestRectangle.width = testRectangleChangesProps.width;
+    expect(validTestRectangle.width).toBe(testRectangleChangesProps.width);
   });
 });

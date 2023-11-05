@@ -18,34 +18,47 @@ export default class Rectangle extends Shape {
   }: RectangleConstructorProps) {
     super(shapConstructore);
 
+    if (height < 0) throw new InvalidHeightError();
+
     this._height = height;
+
+    if (width < 0) throw new InvalidWidthError();
+
     this._width = width;
   }
 
   // Getters & Setters
   get height() {
-    throw new Error('Method not implemented.');
+    return this._height;
   }
 
-  set height(value: any) {
-    throw new Error('Method not implemented.');
+  set height(value: number) {
+    if (value < 0) throw new InvalidHeightError();
+
+    this._height = value;
   }
 
   get width() {
-    throw new Error('Method not implemented.');
+    return this._width;
   }
 
-  set width(value: any) {
-    throw new Error('Method not implemented.');
+  set width(value: number) {
+    if (value < 0) throw new InvalidWidthError();
+
+    this._width = value;
   }
 
   // Overrides
   get area(): number {
-    throw new Error('Method not implemented.');
+    return this._height * this._width;
   }
 
   get parameter(): number {
-    throw new Error('Method not implemented.');
+    return this._height * 2 + this._width * 2;
+  }
+
+  override get details() {
+    return `${super.details}\nwidth: ${this._width}\nheight: ${this._height}`;
   }
 }
 
