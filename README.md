@@ -9,6 +9,7 @@
 - [Vitest](https://vitest.dev/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Google TypeScript Style](https://google.github.io/styleguide/tsguide.html)
+- [VSCode](https://code.visualstudio.com/)
 
 ## Introduction
 
@@ -58,31 +59,35 @@ The test framework I used was [Vitest](https://vitest.dev/) because of 2 reasons
 - It supports ES Modules right out of the ox, with no configuration required.
 - It supports Typescript right out of the ox, with no configuration required.
 
-![tests](./assets/tests.png)
-
 #### Vitest UI
+
+![tests](./assets/tests.png)
 
 Another thing I loved about about [Vitest](https://vitest.dev/) is the [Vitest ui](https://vitest.dev/guide/ui.html).
 
 > Powered by Vite, Vitest also has a dev server under the hood when running the tests. This allows Vitest to provide a beautiful UI to view and interact with your tests
 
+It was cool to work with [Vitest ui](https://vitest.dev/guide/ui.html), but I didn't take time to find a way to integrate [Vitest ui](https://vitest.dev/guide/ui.html) with my text editor ([VSCode](https://code.visualstudio.com/))
+
 ## OOP
 
-### Classes & Objects
+This was pretty basic, especially since I've been dealing with these concepts at school & in my own free time through my personal projects and/or reading about. The basic explanation I was taught is,
 
-### Constructor & class properties
+> A class is like a blueprint, the object is the actual thing.
 
-### Methods
+The classes [UserClass](./src/challenge_1.ts), [Admin](./src/challenge_2.ts), [Shape](./src/inheritance_playground/shape.ts), [Rectangle](./src/inheritance_playground/rectangle.ts), [Circle](./src/inheritance_playground/circle.ts). You will find the objects in the [main](./src/main.ts), [challenge.test](./tests/challenge_1.test.ts), [circle.test](./tests/circle.test.ts) & [rectangle.test](./tests/rectangle.test.ts)
 
-### Getters & Setters
+Unlike the course, I decided to use objects for the constructors, I thought it was easier passing an object to the constructor, because in works like named parameters, which makes it easier to work with in my opinion.
 
-### Inheritance
+I also experimented with my own classes ([Shape](./src/inheritance_playground/shape.ts), [Rectangle](./src/inheritance_playground/rectangle.ts), [Circle ](./src/inheritance_playground/circle.ts)) because I wanted to revise OOP concepts with my own scenario (using shapes).
 
-### Polymorphism
+Each class had getters and setters for each property. Each class also had their own methods, & you'll notice that [Rectangle](./src/inheritance_playground/rectangle.ts), [Circle ](./src/inheritance_playground/circle.ts) also override a few methods from the parent class [Shape](./src/inheritance_playground/shape.ts).
 
-### Encapsulation
+I displayed polymorphism in the [main.ts](./src/main.ts).
 
-### Accessability modifiers
+A few other concepts from the [course](https://www.linkedin.com/learning/typescript-object-oriented-programming/) were also covered.
+
+## Test cases
 
 <!-- Prettier extension not working anymore -->
 
