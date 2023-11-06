@@ -89,8 +89,22 @@ A few other concepts from the [course](https://www.linkedin.com/learning/typescr
 
 ## Test cases
 
-<!-- Prettier extension not working anymore -->
+The tests were the most fun, but time consuming from this project. This
 
-<!--
-I just finished the course “TypeScript: Object-Oriented Programming” by Dylan Israel! Check it out: https://www.linkedin.com/learning/certificates/ab98bf41a09079b73f104f0c61de3ddd894132f60733145412edd380bfb4b307?trk=share_certificate #typescript.
- -->
+There are 3 main phases in TDD (test driven development):
+
+1. Write test cases,
+2. Correct code
+3. Refactor the code
+
+### Write test cases
+
+The first thing I did was write test cases. The tests not only test the code with valid data, but also checks how the methods & constructors react when invalid data is passed in.
+
+### Correct code
+
+After writing the test cases, as expected, the tests will fail. From this point, the methods & constructors were implemented. this was done until all test cases were passed.
+
+### Refactor the code
+
+After all the test cases are done, chcecks for redundancy & possible ways to improve the code is done.
