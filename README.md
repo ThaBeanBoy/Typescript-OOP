@@ -12,9 +12,13 @@
 
 ## Introduction
 
+[certificate](https://www.linkedin.com/learning/certificates/ab98bf41a09079b73f104f0c61de3ddd894132f60733145412edd380bfb4b307)
+
+[![certificate](./assets/certificate.png)](https://www.linkedin.com/learning/certificates/ab98bf41a09079b73f104f0c61de3ddd894132f60733145412edd380bfb4b307)
+
 This is largely based on the [Typescript Object Orientated Programming](https://www.linkedin.com/learning/typescript-object-oriented-programming/) course that is on [LinkedIn Learning](https://www.linkedin.com/learning/). I already have experience with typescript, so the course wasn't challenging. The only thing I did not understanding is the difference between `extends` & `implements`
 
-The more exciting thing for me was the this was the first time learning & using a testing framework. 
+The more exciting thing for me was the this was the first time learning & using a testing framework.
 
 The following concepts were covered:
 
@@ -31,7 +35,7 @@ The following concepts were covered:
 
 ### Vite
 
-The reason why I used vite is because I didn't want to install [typescript](https://www.typescriptlang.org/) & manually configure it, make changges to the package.json scripts etc... Honestly I was just feeling lazy. So I looked for something that would just provided full trypescript support from the word go. 
+The reason why I used vite is because I didn't want to install [typescript](https://www.typescriptlang.org/) & manually configure it, make changges to the package.json scripts etc... Honestly I was just feeling lazy. So I looked for something that would just provided full trypescript support from the word go.
 
 running the following command
 
@@ -54,9 +58,13 @@ The test framework I used was [Vitest](https://vitest.dev/) because of 2 reasons
 - It supports ES Modules right out of the ox, with no configuration required.
 - It supports Typescript right out of the ox, with no configuration required.
 
+![tests](./assets/tests.png)
+
 #### Vitest UI
 
+Another thing I loved about about [Vitest](https://vitest.dev/) is the [Vitest ui](https://vitest.dev/guide/ui.html).
 
+> Powered by Vite, Vitest also has a dev server under the hood when running the tests. This allows Vitest to provide a beautiful UI to view and interact with your tests
 
 ## OOP
 
@@ -78,6 +86,6 @@ The test framework I used was [Vitest](https://vitest.dev/) because of 2 reasons
 
 <!-- Prettier extension not working anymore -->
 
-<!-- 
+<!--
 I just finished the course “TypeScript: Object-Oriented Programming” by Dylan Israel! Check it out: https://www.linkedin.com/learning/certificates/ab98bf41a09079b73f104f0c61de3ddd894132f60733145412edd380bfb4b307?trk=share_certificate #typescript.
  -->
