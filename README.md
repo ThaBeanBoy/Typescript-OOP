@@ -14,7 +14,7 @@
 
 This is largely based on the [Typescript Object Orientated Programming](https://www.linkedin.com/learning/typescript-object-oriented-programming/) course that is on [LinkedIn Learning](https://www.linkedin.com/learning/). I already have experience with typescript, so the course wasn't challenging. The only thing I did not understanding is the difference between `extends` & `implements`
 
-The more exciting thing for me was the this was the first time learning & using a testing library. 
+The more exciting thing for me was the this was the first time learning & using a testing framework. 
 
 The following concepts were covered:
 
@@ -46,6 +46,17 @@ will result in [vite](https://vitejs.dev/) asking us what type of project we wou
 I eventaully installed [Google TypeScript Style](https://google.github.io/styleguide/tsguide.html) because I didn't want to worry about how the code looked, I just wanted a linter that will force consistency. Unfortunately, I noticed that my Prettier extension in VSCode wasn't formatting after installation of [gts](https://google.github.io/styleguide/tsguide.html)
 
 ### Vitest
+
+I recently experienced testing in java applications, that made me realise the importance of testing. Unlike manually testing, which I used to do 🥲, test are like scripts that test your code. In this case, it was unit testing. I majorly tested on the Rectangle & Circle class.
+
+The test framework I used was [Vitest](https://vitest.dev/) because of 2 reasons:
+
+- It supports ES Modules right out of the ox, with no configuration required.
+- It supports Typescript right out of the ox, with no configuration required.
+
+#### Vitest UI
+
+
 
 ## OOP
 
