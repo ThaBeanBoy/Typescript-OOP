@@ -2,6 +2,21 @@
 
 ## Table of Content
 
+- [Typescript Object Orientated Programming](#typescript-object-orientated-programming)
+  - [Table of Content](#table-of-content)
+  - [Resources](#resources)
+  - [Introduction](#introduction)
+  - [Setup](#setup)
+    - [Vite](#vite)
+    - [Google Typescript Style](#google-typescript-style)
+    - [Vitest](#vitest)
+      - [Vitest UI](#vitest-ui)
+  - [OOP](#oop)
+  - [Test cases](#test-cases)
+    - [Write test cases](#write-test-cases)
+    - [Correct code](#correct-code)
+    - [Refactor the code](#refactor-the-code)
+
 ## Resources
 
 - [Course](https://www.linkedin.com/learning/typescript-object-oriented-programming/)
