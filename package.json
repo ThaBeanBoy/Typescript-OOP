@@ -17,11 +17,10 @@
     "posttest": "npm.cmd run lint"
   },
   "devDependencies": {
+    "@types/node": "20.8.2",
     "@vitest/ui": "^0.34.6",
-    "gts": "^5.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
-    "vitest": "^0.34.6",
-    "@types/node": "20.8.2"
+    "vitest": "^0.34.6"
   }
 }
